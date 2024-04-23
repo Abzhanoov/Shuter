@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Computer Builder</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="menu">
+  <ul>
+    <li><a href="#">Процессоры</a></li>
+    <li><a href="#">Мониторы</a></li>
+    <li><a href="#">Корпуса</a></li>
+    <li><a href="#">Видеокарты</a></li>
+  </ul>
+  <button id="addButton">Добавить</button>
+</div>
+<div class="product">
+  <img src="product.jpg" alt="Product Image">
+  <p class="price">$100</p>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+<style>
+    .menu {
+  width: 200px;
+  float: left;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu li {
+  padding: 10px;
+  background: #f0f0f0;
+}
+
+.menu a {
+  color: black;
+  text-decoration: none;
+}
+
+.product {
+  float: left;
+  margin-left: 20px;
+}
+
+.price {
+  font-weight: bold;
+  margin-top: 10px;
+}
+</style>
+
+<script>
+document.getElementById('addButton').addEventListener('click', function() {
+  var productImage = document.createElement('img');
+  productImage.src = 'newproduct.jpg';
+  productImage.alt = 'New Product Image';
+  
+  var price = document.createElement('p');
+  price.className = 'price';
+  price.textContent = '$200';
+  
+  var product = document.querySelector('.product');
+  product.appendChild(productImage);
+  product.appendChild(price);
+});
+</script>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Next Level Login & Registration  Form</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="form signup">
+			<h2>Регестрация</h2>
+			<div class="inputBox">
+				<input type="text" required="required">
+				<i class="fa-regular fa-user"></i>
+				<span>Имя пользователя</span>	
+			</div>
+			<div class="inputBox">
+				<input type="text" required="required">
+				<i class="fa-regular fa-envelope"></i>
+				<span>Эл. адрес</span>
+			</div>
+			<div class="inputBox">
+				<input type="password" required="required">
+				<i class="fa-solid fa-lock"></i>
+				<span>Создать пароль</span>
+			</div>
+			<div class="inputBox">
+				<input type="password" required="required">
+				<i class="fa-solid fa-lock"></i>
+				<span>Подтвердите пароль</span>
+			</div>
+			<div class="inputBox">
+				<a href="href1.html"><input type="submit" value="Создать учетную запись"></a>
+			</div>	
+			<p>Уже являетесь участником ? <a href="#" class="login">Вход</a></p>
+		</div>
+		
+		<div class="form signin">
+			<h2>Войти</h2>
+			<div class="inputBox">
+				<input type="text" required="required">
+				<i class="fa-regular fa-user"></i>
+				<span>Имя пользователя</span>
+			</div>
+			<div class="inputBox">
+				<input type="password" required="required">
+				<i class="fa-solid fa-lock"></i>
+				<span>пароль</span>
+			</div>
+			<div class="inputBox">
+				<a href="href1.html"><input type="submit" value="Вход"></a>
+			</div>
+			<p>Не зарегистрирован ? <a href="#" class="create">Создать учетную запись</a></p>
+		</div>
+
+	</div>
+
+	<script>
+		let login = document.querySelector('.login');
+		let create = document.querySelector('.create');
+		let container = document.querySelector('.container');
+
+		login.onclick = function(){
+			container.classList.add('signinForm');
+		}
+		
+		create.onclick = function(){
+			container.classList.remove('signinForm');
+		}
+	</script>
+</body>
+</html>
